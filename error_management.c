@@ -30,22 +30,13 @@ void read_map(char *av, t_data *all)
     (void)*all;
     fd = open(av, O_RDONLY);
     mp = "";
-    //str = get_next_line(fd);
+    str = get_next_line(fd);
     while(str)
     {
-        str = get_next_line(fd);
-        printf ("%s",str);
-        str = ft_strjoin(str, ":");
-        //printf("%s",str);
         mp = ft_strjoin(mp, str);
-        //printf("%s",mp);
+        str = get_next_line(fd);
     }
-    free(str);
-//(*all).map = ft_split(mp, ':');
-//     int i = 0;
-//     while(a[i])
-//     {
-//         printf("%s\n", a[i]);
-//         i++;
-//     }
+    free(str);// take care
+    (*all).map = ft_split(mp, '\n');
+    free(mp);// take care
 }
