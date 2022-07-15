@@ -3,6 +3,7 @@
 int main(int argc, char **argv)
 {
     t_data  all;
+    
     if (argc != 2)
     {
         write(1,"USAGE : ./so_long  Map.ber\n", 28);

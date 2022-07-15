@@ -1,6 +1,6 @@
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
-SRC = main.c error_management.c
+SRC = main.c error_management.c error_management_1.c 
 SO_LONG = so_long
 SO_LONG_OBJ = $(SRC:%.c=%.o)
 
