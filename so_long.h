@@ -27,6 +27,8 @@ typedef struct t_data
 	int     collect;
     int     player;
     int     exit;
+	int		i_plr;
+	int		j_plr;
 }   t_data;
 
 void    error_management(char *av, t_data *all);
