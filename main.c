@@ -9,6 +9,11 @@ int main(int argc, char **argv)
         write(1,"USAGE : ./so_long  Map.ber\n", 28);
         return (0);
     }
-    error_management(argv[1], &all);
+		
 
+    error_management(argv[1], &all);
+	//printf("**%d**%d",all.x,all.y);
+	window_design(&all);
+	
+	return (0);
 }

@@ -1,6 +1,6 @@
 CC = cc
-CFLAGS = -Wall -Werror -Wextra
-SRC = main.c error_management.c error_management_1.c 
+CFLAGS = -Wall -Werror -Wextra  
+SRC = main.c error_management.c error_management_1.c window.c
 SO_LONG = so_long
 SO_LONG_OBJ = $(SRC:%.c=%.o)
 
@@ -19,7 +19,7 @@ fclean : clean
 re : fclean all
 
 $(SO_LONG) : $(SO_LONG_OBJ) make_libft
-	@$(CC) $(CFLAGS) $(SO_LONG_OBJ) ./libft/libft.a -o $(SO_LONG)
+	@$(CC) $(CFLAGS) -lmlx -framework OpenGL -framework AppKit -L /usr/local/lib  $(SO_LONG_OBJ) ./libft/libft.a -o $(SO_LONG)
 	@printf "\n\033[1;33m****so_long compiled Succesfully ! ****\033[0m\n\n"
 
 %.o:%.c

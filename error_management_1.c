@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-void check_c_p_e(t_data *all)
+void	check_c_p_e(t_data *all)
 {
     int i;
 
@@ -21,7 +21,7 @@ void check_c_p_e(t_data *all)
         exit(write(2, "MAP ERROR : 0 exit\n", 20));
 }
 
-void ft_check_el(char *str, t_data *all)
+void	ft_check_el(char *str, t_data *all)
 {
     int j;
 
@@ -34,9 +34,8 @@ void ft_check_el(char *str, t_data *all)
             all->exit++;
         if (str[j] == 'P')
             all->player++;
+		if (str[j] != 'C' && str[j] != 'P' && str[j] != '1' && str[j] != '0' && str[j] != 'E') // in bonus ajouter  enemies :D
+			exit(write(2, "ERROR : what is this ?\n", 27));
         j++;
     }
-    printf("collection : %d\n", all->collect);
-    printf("player : %d\n", all->player);
-    printf("exit : %d\n", all->exit);
 }
