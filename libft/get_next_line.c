@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jchennak <jchennak@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aelandal <aelandal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 14:10:33 by jchennak          #+#    #+#             */
-/*   Updated: 2022/02/23 23:13:27 by jchennak         ###   ########.fr       */
+/*   Updated: 2022/07/27 12:44:44 by aelandal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE 1
 #endif
-
 
 int	ft_bufflen(char	*str)
 {

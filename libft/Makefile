@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jchennak <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: jchennak <jchennak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 21:20:25 by jchennak          #+#    #+#              #
-#    Updated: 2021/11/29 21:21:26 by jchennak         ###   ########.fr        #
+#    Updated: 2022/07/28 13:37:38 by jchennak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = cc
+CC = @cc
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -57,7 +57,6 @@ all : ${NAME}
 	
 OBJ = ${SRCF:.c=.o}
 
-# compiler qvec les flag et cree les .o 
 
 ${NAME} : ${OBJ}
 	@ar -rcs ${NAME} ${OBJ}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jchennak <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aelandal <aelandal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 15:56:00 by jchennak          #+#    #+#             */
-/*   Updated: 2022/02/23 16:37:52 by jchennak         ###   ########.fr       */
+/*   Updated: 2022/07/27 12:45:34 by aelandal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
-#include "libft.h"
+# include "libft.h"
 
 char	*get_next_line(int fd);
 
