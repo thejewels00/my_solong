@@ -43,6 +43,14 @@ typedef struct t_data
 	int		exit;
 	int		i_plr;
 	int		j_plr;
+	int		steps;
+	char	*j0;
+	char	*j1;
+	char	*j2;
+	char	*j3;
+	char	*j4;
+	char	*j5;
+	char	*j6;
 }	t_data;
 
 void	error_management(char *av, t_data *all);
@@ -61,5 +69,9 @@ char	*fill_map(int fd);
 void	dsign_img(t_data *all, int i, int j);
 void	change_position(char *direction, char *current_pos, t_data *all);
 int		exit_win(void);
+void	ft_sleep(int i, int j);
+int		animation(t_data *all);
+void	move_part_1(int keycode, t_data *all);
+int		move(int keycode, t_data *all);
 
 #endif

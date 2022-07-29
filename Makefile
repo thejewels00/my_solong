@@ -1,5 +1,5 @@
 SO_LONG = so_long
-SO_LONG_BONUS = bonus
+SO_LONG_BONUS = solong_bonus
 CC = @cc
 CFLAGS = -Wall -Werror -Wextra -g #-fsanitize=address
 SRC =	mandatory/main.c \
@@ -13,12 +13,13 @@ SRC_BONUS =	so_long_bonus/main_bonus.c \
 			so_long_bonus/error_management_1_bonus.c \
 			so_long_bonus/window_bonus.c \
 			so_long_bonus/window_2_bonus.c \
+			so_long_bonus/window_bonus_3.c \
 
 SO_LONG_OBJ = $(SRC:%.c=%.o)
 
 SO_LONG_OBJ_BONUS = $(SRC_BONUS:%.c=%.o)
 
-all : $(SO_LONG) $(SO_LONG_BONUS)
+all : $(SO_LONG) 
 
 clean :
 	@rm -rf mandatory/*.o so_long_bonus/*.o 
@@ -26,7 +27,7 @@ clean :
 	@printf "\033[1;36mObject Files Deleted !\033[0m\n"
 
 fclean : clean
-	@rm -rf $(SO_LONG) $(so_long_bonus)
+	@rm -rf $(SO_LONG) $(SO_LONG_BONUS)
 	@make -C libft fclean
 	@printf "\033[1;36mProgram Deleted !\033[0m\n"
 
@@ -37,7 +38,7 @@ $(SO_LONG) : $(SO_LONG_OBJ) make_libft
 	$(CC) $(CFLAGS) -lmlx -framework OpenGL -framework AppKit -L /usr/local/lib  $(SO_LONG_OBJ) ./libft/libft.a -o $(SO_LONG)
 	@printf "\033[1;33m****so_long compiled Succesfully ! ****\033[0m\n"
 
-$(SO_LONG_BONUS) : $(SO_LONG_OBJ_BONUS) make_libft
+bonus : $(SO_LONG_OBJ_BONUS) make_libft
 	$(CC) $(CFLAGS) -lmlx -framework OpenGL -framework AppKit -L /usr/local/lib  $(SO_LONG_OBJ_BONUS) ./libft/libft.a -o $(SO_LONG_BONUS)
 	@printf "\033[1;33m****so_long_bonus compiled Succesfully ! ****\033[0m\n"
 
