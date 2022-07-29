@@ -47,7 +47,7 @@ void	check_perimeter(t_data all)
 	i = 0;
 	while (all.map[0][i] && all.map[all.y - 1][i])
 	{
-		if (all.map[0][i] != '1' || all.map[all.y - 1][0] != '1')
+		if (all.map[0][i] != '1' || all.map[all.y - 1][i] != '1')
 			exit(write(2, "ERROR : Border \n", 17));
 		i++;
 	}

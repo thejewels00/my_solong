@@ -48,7 +48,7 @@ void	ft_check_el(char *str, t_data *all)
 			all->player++;
 		if (str[j] != 'C' && str[j] != 'P' && str[j] != '1'
 			&& str[j] != '0' && str[j] != 'E')
-			exit(write(2, "ERROR : what is this ?\n", 24));
+			exit(write(2, "MAP ERROR : unknown characters\n", 32));
 		j++;
 	}
 }
@@ -65,7 +65,7 @@ void	read_map(char *av, t_data *all)
 	if (mp[0] == '\n' || mp[ft_strlen(mp) - 1] == '\n')
 	{
 		free(mp);
-		exit(write(2, "EROOR : NEW LINE !! in end or start of file :D \n", 46));
+		exit(write(2, "EROOR : NEW LINE !! in end or start of file :D \n", 49));
 	}
 	(*all).map = ft_split(mp, '\n');
 	free(mp);

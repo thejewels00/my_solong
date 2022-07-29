@@ -6,7 +6,7 @@
 /*   By: jchennak <jchennak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 13:36:24 by jchennak          #+#    #+#             */
-/*   Updated: 2022/07/29 14:52:00 by jchennak         ###   ########.fr       */
+/*   Updated: 2022/07/29 19:59:58 by jchennak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ void	init_images(t_data *all)
 	all->j6 = mlx_xpm_file_to_image(all->mlx_id, "./animation/10.xpm", &a, &b);
 }
 
-void picture(t_data *all)
+void	picture(t_data *all)
 {
 	static int	tmp;
-	
+
 	tmp++;
 	tmp %= 7;
 	if (tmp == 0)
@@ -75,7 +75,7 @@ void picture(t_data *all)
 int	animation(t_data *all)
 {
 	char	*stp;
-	
+
 	picture(all);
 	ft_sleep(10000, 900);
 	mlx_clear_window(all->mlx_id, all->win_id);

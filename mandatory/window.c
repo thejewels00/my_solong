@@ -6,7 +6,7 @@
 /*   By: jchennak <jchennak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 09:44:17 by jchennak          #+#    #+#             */
-/*   Updated: 2022/07/28 11:33:54 by jchennak         ###   ########.fr       */
+/*   Updated: 2022/07/29 19:56:19 by jchennak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	move(int keycode, t_data *all)
 
 int	exit_win(void)
 {
-	write(1, "Winner", 7);
+	write(1, "Winner\n", 8);
 	exit(0);
 }
 
